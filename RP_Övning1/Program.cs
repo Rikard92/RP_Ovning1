@@ -52,8 +52,8 @@ namespace RP_Övning1
                 {
                     Console.WriteLine("Nuber of employes: "+EmployeList.Count());
                     foreach (Employe E in EmployeList)
-                    {                        
-                        Console.WriteLine(E.FirstName+" "+E.SecondName+" "+E.LastName+" - Salary: "+E.Salary+"kr");
+                    {
+                        Console.WriteLine(E.getFName() + " " + E.getSName() + " " + E.getLName() + " - Salary: " + E.getSalary() + "kr");
                     }
 
                 }
@@ -87,10 +87,27 @@ namespace RP_Övning1
             LastName = LN;
             Salary = S;
         }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string SecondName { get; set; }
-        public int Salary { get; set; }
+        private string FirstName { get; set; }
+        private string LastName { get; set; }
+        private string SecondName { get; set; }
+        private int Salary { get; set; }
+
+        public string getFName()
+        {
+            return FirstName;
+        }
+        public string getSName()
+        {
+            return SecondName;
+        }
+        public string getLName()
+        {
+            return LastName;
+        }
+        public int getSalary()
+        {
+            return Salary;
+        }
     }
     
 }
